@@ -1,13 +1,13 @@
 class AcpServer < Formula
   desc "Agent Credential Proxy - secure credential management for AI agents"
   homepage "https://github.com/mikekelly/acp"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mikekelly/acp/releases/download/v0.2.0/acp-darwin-arm64.tar.gz"
-      sha256 "4cd0086adf577a04eabeb87b64205be5e71d6abc49baa4b9f9b24878d5258b2a"
+      url "https://github.com/mikekelly/acp/releases/download/v0.2.1/acp-darwin-arm64.tar.gz"
+      sha256 "eade246a88876c4417988934c1d90112c105ffe455ef246d29122504dd8b35d1"
     else
       # x86_64 binary not yet available
       odie "Intel Mac binary not yet available. Please build from source."

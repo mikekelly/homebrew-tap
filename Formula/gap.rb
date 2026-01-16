@@ -7,7 +7,7 @@ class Gap < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/mikekelly/gap/releases/download/v0.3.1/gap-darwin-arm64.tar.gz"
-      sha256 "d8c00e59918e21ead39e1f47bc1ee074f700660ddbb9d79a139d0b61464e281e"
+      sha256 "1a50b05b4e4c08dba2d81bb0ebd32b496ef7277e77f5f04c6ec112e82822afd0"
     else
       # x86_64 binary not yet available
       odie "Intel Mac binary not yet available. Please build from source."

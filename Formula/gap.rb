@@ -1,4 +1,4 @@
-class GapServer < Formula
+class Gap < Formula
   desc "Gated Agent Proxy - secure credential management for AI agents"
   homepage "https://github.com/mikekelly/gap"
   version "0.3.1"

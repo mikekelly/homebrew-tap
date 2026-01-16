@@ -11,13 +11,13 @@ brew tap mikekelly/tap
 ### GAP Server
 
 ```bash
-brew install gap-server
+brew install gap
 ```
 
 Start as background service:
 
 ```bash
-brew services start gap-server
+brew services start gap
 ```
 
 ### tsk
@@ -31,8 +31,8 @@ brew install tsk
 ### GAP Server
 
 ```bash
-brew services stop gap-server
-brew uninstall gap-server
+brew services stop gap
+brew uninstall gap
 ```
 
 ### tsk

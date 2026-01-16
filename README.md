@@ -1,23 +1,23 @@
-# Homebrew ACP
+# Homebrew GAP
 
-Homebrew tap for [ACP (Agent Credential Proxy)](https://github.com/mikekelly/acp) and [tsk](https://github.com/mikekelly/tsk).
+Homebrew tap for [GAP (Gated Agent Proxy)](https://github.com/mikekelly/gap) and [tsk](https://github.com/mikekelly/tsk).
 
 ## Installation
 
 ```bash
-brew tap mikekelly/acp
+brew tap mikekelly/gap
 ```
 
-### ACP Server
+### GAP Server
 
 ```bash
-brew install acp-server
+brew install gap-server
 ```
 
 Start as background service:
 
 ```bash
-brew services start acp-server
+brew services start gap-server
 ```
 
 ### tsk
@@ -28,11 +28,11 @@ brew install tsk
 
 ## Uninstall
 
-### ACP Server
+### GAP Server
 
 ```bash
-brew services stop acp-server
-brew uninstall acp-server
+brew services stop gap-server
+brew uninstall gap-server
 ```
 
 ### tsk
@@ -44,5 +44,5 @@ brew uninstall tsk
 ### Remove tap
 
 ```bash
-brew untap mikekelly/acp
+brew untap mikekelly/gap
 ```

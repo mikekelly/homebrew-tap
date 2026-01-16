@@ -17,6 +17,8 @@ class Gap < Formula
   def install
     bin.install "gap"
     bin.install "gap-server"
+    # Alias for oh-my-zsh users who have 'gap' aliased to 'git apply'
+    bin.install_symlink "gap" => "gap-cli"
   end
 
   service do

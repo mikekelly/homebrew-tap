@@ -19,8 +19,8 @@
 class Ssf < Formula
   desc "GitHub issues assigned to a bot become coding-agent sessions in herdr"
   homepage "https://github.com/mikekelly/simple-software-factory"
-  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "40e2946d7e81d7085d1d3eb797e22db30622256e1e917de11eba0c45f7028650"
+  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.9.3.tar.gz"
+  sha256 "10d0c6e567a5c6b3bd74925865bafbd755d8e808c37bb881690e3640dcf8c1f5"
   license "MIT"
   head "https://github.com/mikekelly/simple-software-factory.git", branch: "master"
 
@@ -42,7 +42,7 @@ class Ssf < Formula
 
     # #{HOMEBREW_PREFIX}/share/ssf/vm is where `ssf vm build` looks for the
     # image scripts, relative to the binary (<bin>/../share/ssf/vm).
-    pkgshare.install "vm", "config.example.toml", "SSF.example.md"
+    pkgshare.install "vm", "harness", "config.example.toml", "SSF.example.md"
     doc.install "README.md", "docs"
   end
 

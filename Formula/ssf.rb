@@ -13,14 +13,14 @@
 # .github/workflows/release.yml).
 #
 # Differences from the Arch package (packaging/release/PKGBUILD): no ssf-ui
-# and no Omarchy bar widget (both Omarchy-only), no systemd unit (the
+# and no Omarchy Factory menu (both Omarchy-only), no systemd unit (the
 # `service` block below is the launchd agent), and no herdr dependency: the
 # factory runs in a lima VM on macOS and herdr lives in the guest.
 class Ssf < Formula
   desc "GitHub issues assigned to a bot become coding-agent sessions in herdr"
   homepage "https://github.com/mikekelly/simple-software-factory"
-  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.9.3.tar.gz"
-  sha256 "10d0c6e567a5c6b3bd74925865bafbd755d8e808c37bb881690e3640dcf8c1f5"
+  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.18.0.tar.gz"
+  sha256 "ab561019e9079cfb1d002155dd5f5dfac8f560a0ba1280e6c19065220b69a1b7"
   license "MIT"
   head "https://github.com/mikekelly/simple-software-factory.git", branch: "master"
 
@@ -37,7 +37,7 @@ class Ssf < Formula
 
   def install
     # Cargo installs the ssf client and ssf-server daemon; bin/ssf-ui is the
-    # Omarchy bar widget's helper and is not installed here.
+    # Omarchy Factory menu's helper and is not installed here.
     system "cargo", "install", *std_cargo_args
 
     # #{HOMEBREW_PREFIX}/share/ssf/vm is where `ssf vm build` looks for the
@@ -49,7 +49,7 @@ class Ssf < Formula
   def caveats
     <<~EOS
       Setup, step by step (also for your coding agent to follow):
-        #{HOMEBREW_PREFIX}/share/doc/ssf/docs/setup.md
+        #{HOMEBREW_PREFIX}/share/doc/ssf/docs/install.md
 
       On macOS the factory runs in a lima VM: build it once with
         ssf vm build

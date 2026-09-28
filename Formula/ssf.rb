@@ -19,8 +19,8 @@
 class Ssf < Formula
   desc "GitHub issues assigned to a bot become coding-agent sessions in herdr"
   homepage "https://github.com/mikekelly/simple-software-factory"
-  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.20.0.tar.gz"
-  sha256 "43af1046179dc1c6f66220a2adf40e3777e895fee65cfe7b168c011b6e4b50bf"
+  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.21.0.tar.gz"
+  sha256 "6757bb7b83f5f0a6b3b9c8206b3c13b63747ef6801abe62931dc6adb708b0e9f"
   license "MIT"
   head "https://github.com/mikekelly/simple-software-factory.git", branch: "master"
 
@@ -56,6 +56,10 @@ class Ssf < Formula
       then start the service, which supervises the VM and the daemon:
         brew services start ssf
       The log is #{var}/log/ssf.log.
+
+      After `brew upgrade ssf`, restart the service to run the new version:
+        brew services restart ssf
+      The VM and its agent sessions keep running; the new service reattaches.
 
       To run the factory on this machine instead of in a VM (driver = "herdr"
       with [vm] enabled = false), or to attach to a session with `herdr

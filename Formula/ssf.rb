@@ -19,8 +19,8 @@
 class Ssf < Formula
   desc "GitHub issues assigned to a bot become coding-agent sessions in herdr"
   homepage "https://github.com/mikekelly/simple-software-factory"
-  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.19.0.tar.gz"
-  sha256 "bf24d1bb175ba1b6177da2a9a7c1b6a0e0f04d984b892a835b312eb7d725fdff"
+  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.20.0.tar.gz"
+  sha256 "43af1046179dc1c6f66220a2adf40e3777e895fee65cfe7b168c011b6e4b50bf"
   license "MIT"
   head "https://github.com/mikekelly/simple-software-factory.git", branch: "master"
 

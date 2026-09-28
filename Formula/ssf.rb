@@ -19,8 +19,8 @@
 class Ssf < Formula
   desc "GitHub issues assigned to a bot become coding-agent sessions in herdr"
   homepage "https://github.com/mikekelly/simple-software-factory"
-  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.21.0.tar.gz"
-  sha256 "6757bb7b83f5f0a6b3b9c8206b3c13b63747ef6801abe62931dc6adb708b0e9f"
+  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.22.0.tar.gz"
+  sha256 "5131a70f1fc71a104556c989e5ab4a35fc8255f7c924db50ea008af329f6ab30"
   license "MIT"
   head "https://github.com/mikekelly/simple-software-factory.git", branch: "master"
 
@@ -51,14 +51,13 @@ class Ssf < Formula
       Setup, step by step (also for your coding agent to follow):
         #{HOMEBREW_PREFIX}/share/doc/ssf/docs/install.md
 
-      On macOS the factory runs in a lima VM: build it once with
+      On macOS the factory runs in a lima VM. `ssf setup` enables a launchd
+      agent per server (dev.ssf.server.NAME), then build the VM once with
         ssf vm build
-      then start the service, which supervises the VM and the daemon:
-        brew services start ssf
-      The log is #{var}/log/ssf.log.
+      Do not use `brew services`: that is an older, separate service.
 
-      After `brew upgrade ssf`, restart the service to run the new version:
-        brew services restart ssf
+      After `brew upgrade ssf`, restart the agent to run the new version:
+        launchctl kickstart -k gui/$(id -u)/dev.ssf.server.NAME
       The VM and its agent sessions keep running; the new service reattaches.
 
       To run the factory on this machine instead of in a VM (driver = "herdr"

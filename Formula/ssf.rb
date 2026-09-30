@@ -19,8 +19,8 @@
 class Ssf < Formula
   desc "GitHub issues assigned to a bot become coding-agent sessions in herdr"
   homepage "https://github.com/mikekelly/simple-software-factory"
-  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.24.0.tar.gz"
-  sha256 "75e41e282bb9e9934e23d1d602354269d994a4eb835938c698881e9d196ec889"
+  url "https://github.com/mikekelly/simple-software-factory/archive/refs/tags/v0.24.1.tar.gz"
+  sha256 "9856fac420597895f8eaa24f7ca90d44d8e6b418f68bbf49c9030294bc2f847a"
   license "MIT"
   head "https://github.com/mikekelly/simple-software-factory.git", branch: "master"
 
@@ -30,9 +30,9 @@ class Ssf < Formula
   end
 
   bottle do
-    root_url "https://github.com/mikekelly/simple-software-factory/releases/download/v0.24.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "468b81a37b648c6535d81ba0df34ef1c39d0d242b8c1815e3d36ec86861003f4"
-    sha256 cellar: :any_skip_relocation, sequoia: "edc8746ec8e8b1106cdaa6c4b482876f37a691325c7d63b1e443ab60d4bbe48e"
+    root_url "https://github.com/mikekelly/simple-software-factory/releases/download/v0.24.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "921f93a65346931b5205401c742c2f68078f3bcb585b6f0b1fea757427ac2ff6"
+    sha256 cellar: :any_skip_relocation, sequoia: "2f8625b311d2dab43e08c4972f1c57d0a71316f4b617f95eac4b43b8455ea2b8"
   end
 
   depends_on "rust" => :build
